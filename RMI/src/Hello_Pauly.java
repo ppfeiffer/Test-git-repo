@@ -16,5 +16,9 @@ public class Hello_Pauly {
 	{
 		System.out.println("");
 	}
+	
+	public void test() {
+		System.out.println("niachtniachtniacht!!!!");
+	}
 
 }
