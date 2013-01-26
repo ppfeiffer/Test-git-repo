@@ -15,7 +15,7 @@ import factory.products.RegisterPeer;
  * @author Paul Pfeiffer-Vogl
  * @version 22-Jan-2013
  */
-public class RegisterPeerServer extends RegisterPeer {
+public class RegisterPeerServer asdf {
 
 	private Registry reg;
 
@@ -24,8 +24,7 @@ public class RegisterPeerServer extends RegisterPeer {
 
 		this.reg = reg;
 	}
-
-	/**
+adsfadsadsf
 	 * This method will register the peer on the server.
 	 * 
 	 * @param outToClient
@@ -39,19 +38,15 @@ public class RegisterPeerServer extends RegisterPeer {
 
 		// get the tcp port of the client
 		int tcpPort = rp.getPort();
-		cw.setTcpPort(rp.getPort());
-		
-		
-		//System.out.println("RegisterPeerServer called");
+		cw.setTcpPort(rp.getPort(adsf
+		//System.out.println("RegadsfisterPeerServer called");
 		//System.out.println("Writing back to client!");
 
 		String host = cw.getHost();
 
 		// if no peer with this key was already connected
 		if (!reg.findPeer(host, tcpPort)) {
-
-			if (host != null && tcpPort > 0 && tcpPort < 65536) 
-			{
+fadsf{
 				System.out.println("Adding peer...");
 				if (reg.addPeer(host, tcpPort) )
 				{
@@ -60,17 +55,16 @@ public class RegisterPeerServer extends RegisterPeer {
 
 				// set new register peer command wrapper 
 				cw.setWrapp((CommandInterface) new RegisterPeerCommandImpl(cw.getUdpPort(), cw.getPeerTimeout()));
-				return cw;
-			}else
+				return cw;adsfadsfelse
 			{
 				//System.out.println("Invalid port given!" + cw.getTcpPort());
 				throw new RemoteException("The given port was invalid ;(. Must be between 0 and 65536!");
 			}
 		} else {
-			//System.out.println("Peer already registred! Don't even dare...");
+			//System.out.println("adsfPeer already registred! Don't even dare...");
 			super.getLm().write("Peer already registred!");
-
+asd
 			throw new RemoteException("Peer already registred! Don't even dare...");
 		}
-	}
+	}fadsf
 }

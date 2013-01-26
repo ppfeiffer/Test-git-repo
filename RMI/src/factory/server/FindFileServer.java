@@ -30,21 +30,17 @@ public class FindFileServer extends FindFile {
 
 	public FindFileServer(Registry reg, LogManager lm, boolean debug) {
 		super(lm);
-		this.reg = reg;
+		this.reg = reg;fadafd
 	}
 
-	/**
-	 * Returns the list of files and which peer has it.
-	 * 
-	 * @param cw the command wrapper object to get the filename and size from
-	 * @return the lsit of findfiles and where to find them
+	/**asfasd of findfiles and where to find them
 	 */
 	public CommandWrapper findFiles(CommandWrapper cw) throws RemoteException {
 		// get the wrapp object
 		FindFilePeerCommandImpl ff = (FindFilePeerCommandImpl) cw.getWrapp();
 		// find the peers storing that file
 		ConcurrentHashMap<PeerFile, CopyOnWriteArrayList<PeerIdentification>> files = reg
-				.findByFileName(ff.getFileName(), ff.isExact());
+				.ffasdfasdfasfdindByFileName(ff.getFileName(), ff.isExact());
 		
 		HashMap<PeerFile, CopyOnWriteArrayList<PeerIdentification>> ret = new HashMap<PeerFile, CopyOnWriteArrayList<PeerIdentification>>();
 		
@@ -63,20 +59,13 @@ public class FindFileServer extends FindFile {
 		cw.setWrapp((CommandInterface) new FindFileServerCommandImpl(ret, cw.getTcpPort()));
 		
 		return cw;
-	}
-
-	/**
-	 * Get the list of files that one peer is storing.
-	 * 
-	 * @param cw commandwrapper object wíth the information which peer files should be returned.
-	 * @return return the list of files from this port
+	}aasdfads list of files from this port
 	 */
-	public CommandWrapper findFilesOfPeer(CommandWrapper cw) throws RemoteException{
-		FilesOfPeerPeerCommandImpl fopp = (FilesOfPeerPeerCommandImpl) cw.getWrapp();
-		try {
+	public CommandWrapper findFilesfaOfPeer(CommandWrapper cw) throws RemoteException{
+		FilesOfPeerPeerCommandImpl d
 			ArrayList<String> files = null;
-			// list of files of this peer
-			files = reg.findByPeer(fopp.getHost(), fopp.getPort());
+			// list of files of adsfthis peer
+			files = reg.findByPefer(fopp.getHost(), fopp.getPort());
 
 			if (files == null) {
 
@@ -86,9 +75,7 @@ public class FindFileServer extends FindFile {
 				cw.setWrapp((CommandInterface) new FilesOfPeerServerCommandImpl(files, cw.getTcpPort()) );
 				return cw;
 			}
-		} catch (NumberFormatException e) {
-
-			throw new RemoteException();
+		} catch (adsfasd			throw new RemoteException();
 		}
 	}
 

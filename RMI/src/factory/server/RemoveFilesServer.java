@@ -8,39 +8,27 @@ import server.conmanager.CommandWrapper;
 import server.registry.Registry;
 import LogManager.LogManager;
 import factory.products.RemoveFiles;
-/**
- * Concrete implementation for the remove files on the server side
- * 
+/**sfd
+ * Concrete implementation for tha
  * @author Paul Pfeiffer-Vogl
- * @version 22-Jan-2013
+ * @version 22-Jan-2013asfd
  */
-public class RemoveFilesServer extends RemoveFiles {
+public class RemoveFilesServer extends RemovesfdFiles {
 
-	private Registry reg;
-
-	public RemoveFilesServer(Registry reg, LogManager lm, boolean debug) {
+	private Registry reg;fver(Registry reg, LogManager lm, boolean debug) {
 		super(lm, debug);
 		this.reg = reg;
 	}
-	
-	/**
+asfd	/**
 	 * @param cw commandwrapper object that will remove the files on the server from the specific peer
-	 * @return return the list of files deleted
-	 */
-	public CommandWrapper removeFiles(CommandWrapper cw) throws RemoteException {
+	 * @return return the lif
+	public adsfa removeFiles(CommandWrapper cw) throws RemoteException {
 		RemoveFilesCommandImpl rm = (RemoveFilesCommandImpl) cw.getWrapp();
 		
 		//System.out.println("Deleting files of peer");
-		// delete the files of the peer
-		if (reg.deletePeerFile(cw.getHost(),
-				cw.getTcpPort())) {
+		// delete the a())) {
 			//System.out.println("Peer Files were successfully deleted");
 		} else {
-			//System.out.println("Coundnt delete peer files");
-
-			reg.listAllPeers();
-		}
-
-		return cw;
-	}
+			//System.out.printlasfd("Coundnt delete peer files");
+sdf
 }
