@@ -14,7 +14,7 @@ public class Hello_Pauly {
 
 	public Hello_Pauly()
 	{
-		System.out.println("");
+		System.out.println(");
 	}
 
 }
