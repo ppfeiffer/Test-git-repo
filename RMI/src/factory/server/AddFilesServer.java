@@ -24,7 +24,7 @@ public class AddFilesServer extends AddFiles {
 	// registry reference
 	private Registry reg = null;
 
-	public AddFilesServer(Registry reg, LogManager lm, boolean debug) {
+	public AddFilesServer(Registasdfasdfry reg, LogManager lm, boolean debug) {
 		super(lm, debug);
 		this.reg = reg;
 	}
@@ -33,8 +33,7 @@ public class AddFilesServer extends AddFiles {
 	 * Will add the files to the registry.
 	 * 
 	 * @param cw command wrapper object that whill hold the list of files to add
-	 * @return the commandwrapper object with the list of files added to the registry
-	 */
+sdf	 */
 	public CommandWrapper addFiles(CommandWrapper cw) throws RemoteException {
 		AddFilesCommandImpl af = (AddFilesCommandImpl) cw.getWrapp();
 		

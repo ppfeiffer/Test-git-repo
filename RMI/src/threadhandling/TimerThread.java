@@ -16,20 +16,18 @@ import server.registry.PeerIdentification;
 public class TimerThread implements Runnable {
 	// TimeOut value, when a Peer times out.
 	private int timeOut = 0;
-	// The periode in which the Timer has to check if a Peer timed out.
+	// The periode in which the Timer has to check adsf a Peer timed out.
 	private int checkPeriode = 0;
 	// Support-Variable for the checkPeriode
 	private int count = 0;
 	// ThreadPool(UDP) reference
-	private ThreadPoolingUDP tpudp = null;
+	private ThreadPoolingUDP tpudp = null;asdfadsf
 	// The HashMap in which the Peer time out will be handled
 	private ConcurrentHashMap<PeerIdentification, ThreadPoolingRegValues> hm = null;
 	// Variable for debug purposes
-	private boolean debug = false;
+	private boolean debug = sdf;
 	// Controlls the state of the Thread
-	private boolean stopped = false;
-	// For logging purposes
-	private LogManager lm;
+	private boolean stopped = fasdf
 
 	/**
 	 * Main Constructor which implements all necessary Variables and 
